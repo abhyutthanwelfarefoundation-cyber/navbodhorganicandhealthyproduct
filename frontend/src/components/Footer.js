@@ -25,7 +25,7 @@ const Footer = () => (
           </p>
           <div style={{ display: 'flex', gap: 10, marginTop: 20, flexWrap: 'wrap' }}>
             <a href="tel:07714040459" style={{ display: 'inline-flex', alignItems: 'center', gap: 7, background: 'rgba(255,255,255,0.09)', borderRadius: 8, padding: '9px 14px', fontSize: 13, fontWeight: 600 }}>
-              📞 077140 40459
+              📞 7471145013
             </a>
           </div>
         </div>
@@ -68,7 +68,7 @@ const Footer = () => (
             </div>
             <div style={{ marginBottom: 12 }}>
               <div style={{ fontWeight: 700, opacity: 1, marginBottom: 3 }}>📞 Phone</div>
-              <a href="tel:07714040459" style={{ display: 'block' }}>077140 40459</a>
+              <a href="tel:07714040459" style={{ display: 'block' }}>7471145013</a>
               <a href="tel:+916261557175" style={{ display: 'block' }}>+91 62615 57175</a>
             </div>
             <div>

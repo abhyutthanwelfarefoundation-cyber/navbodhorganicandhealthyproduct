@@ -9,6 +9,7 @@ import Home          from './pages/Home';
 import Products      from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
 import MangoesPage   from './pages/Mangoes';
+import Gallery from './pages/Gallery';
 import Cart          from './pages/Cart';
 import Checkout      from './pages/Checkout';
 import { OrderSuccess, WhyUs, Contact, Order } from './pages/OtherPages';
@@ -26,6 +27,9 @@ function App() {
             <Route path="/products"      element={<Products />} />
             <Route path="/products/:id"  element={<ProductDetail />} />
             <Route path="/mangoes"       element={<MangoesPage />} />
+            <Route path="/gallery"       element={<Gallery />} />
+
+
             <Route path="/cart"          element={<Cart />} />
             <Route path="/checkout"      element={<Checkout />} />
             <Route path="/order-success" element={<OrderSuccess />} />

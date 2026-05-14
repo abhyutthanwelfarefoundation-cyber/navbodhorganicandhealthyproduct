@@ -10,6 +10,7 @@ import {
 } from 'react-icons/hi';
 import {
   MdStorefront, MdInfoOutline, MdLocationOn, MdPhone,
+  MdPhoto,
 } from 'react-icons/md';
 import { IoLeafOutline } from 'react-icons/io5';
 import { BsBoxSeam } from 'react-icons/bs';
@@ -19,10 +20,12 @@ try { LogoImg = require('../assets/logo2.png'); } catch {}
 
 const LINKS = [
   { to: '/',         label: 'Home',     Icon: MdStorefront   },
-  { to: '/mangoes',  label: 'Mangoes',  Icon: MangoIcon       },
   { to: '/products', label: 'Products', Icon: IoLeafOutline  },
+  { to: '/gallery',  label: 'Gallery',  Icon: MdPhoto   },
+  { to: '/mangoes',  label: 'Mangoes',  Icon: MangoIcon       },  
   { to: '/why-us',   label: 'Why Us',   Icon: MdInfoOutline  },
   { to: '/contact',  label: 'Contact',  Icon: MdLocationOn   },
+
 ];
 
 const Navbar = () => {
