@@ -15,8 +15,8 @@ import {
 import { IoLeafOutline } from 'react-icons/io5';
 import { BsBoxSeam } from 'react-icons/bs';
 
-// let LogoImg = null;
-// try { LogoImg = require('../assets/logo2.png'); } catch {}
+let LogoImg = null;
+try { LogoImg = require('../assets/logo2.png'); } catch {}
 
 const LINKS = [
   { to: '/',         label: 'Home',     Icon: MdStorefront   },
