@@ -19,7 +19,7 @@ export const PRODUCT_IMAGES = {
   'Tota Pari':      loadImg('TotaParimangoes.png'),
   'Amrapali':       loadImg('Amrpalimangoes.png'),
   'Mallika':        loadImg('Mallikamangoes.png'),
-  'Pure Desi Ghee': loadImg('desi ghee.png'),
+  'Pure Desi Ghee': loadImg('desi ghee2.png'),
   'Fresh Milk':     loadImg('freshmilk.png'),
   'Jackfruit':      loadImg('jackfruit.png'),
   'Fresh Lemon':    loadImg('lemon.png'),
