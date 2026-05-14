@@ -589,7 +589,7 @@ const Home = () => {
             </motion.p>
             <motion.div variants={fadeUp} style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
-                <a href="tel:07714040459" className="btn btn-beige btn-lg"
+                <a href="tel:7471145013" className="btn btn-beige btn-lg"
                   style={{ display: 'flex', alignItems: 'center', gap: 9 }}>
                   <MdPhone size={18} /> 7471145013
                 </a>
@@ -621,7 +621,7 @@ const Home = () => {
               </motion.h2>
               {[
                 { Icon: IoLocationSharp,  label: 'Address',    val: 'Samta Colony Main Rd, Samta Colony\nRaipur, CG 492001 · Samta Shopping Arcade', href: null },
-                { Icon: MdPhone,          label: 'Phone',      val: '7471145013\n+91 62615 57175', href: 'tel:07714040459' },
+                { Icon: MdPhone,          label: 'Phone',      val: '7471145013\n+91 62615 57175', href: 'tel:7471145013' },
                 { Icon: IoTimeOutline,    label: 'Hours',      val: 'Open daily until 8:30 PM', href: null },
               ].map(({ Icon, label, val, href }, i) => (
                 <motion.div key={i} variants={fadeUp}

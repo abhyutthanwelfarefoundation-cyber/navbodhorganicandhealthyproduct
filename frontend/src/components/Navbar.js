@@ -137,7 +137,7 @@ const Navbar = () => {
       )}
 
       {/* FAB */}
-      <a href="tel:07714040459" className="fab-call"
+      <a href="tel:7471145013" className="fab-call"
         style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
         <MdPhone size={18} />
         Call Us Now

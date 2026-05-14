@@ -19,7 +19,7 @@ export const OrderSuccess = () => {
           <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 28, color: 'var(--forest-deep)' }}>#{String(orderId).slice(-8).toUpperCase()}</div>
         </div>
         <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <a href="tel:07714040459" className="btn btn-forest btn-lg">📞 7471145013</a>
+          <a href="tel:7471145013" className="btn btn-forest btn-lg">📞 7471145013</a>
           <Link to="/products" className="btn btn-outline btn-lg">Continue Shopping</Link>
         </div>
       </div>
@@ -74,7 +74,7 @@ export const WhyUs = () => {
         <div className="container">
           <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px,4.5vw,52px)', color: 'white', marginBottom: 14 }}>Ready to Go Organic?</h2>
           <p style={{ color: 'rgba(255,255,255,0.68)', fontSize: 16, marginBottom: 32 }}>Join hundreds of families in Raipur enjoying fresh, chemical-free produce daily.</p>
-          <a href="tel:07714040459" className="btn btn-beige btn-lg">📞 Call: 7471145013</a>
+          <a href="tel:7471145013" className="btn btn-beige btn-lg">📞 Call: 7471145013</a>
         </div>
       </section>
     </div>
@@ -118,7 +118,7 @@ export const Contact = () => {
 
               {[
                 { icon:'📍', label:'Address',    val:'Samta Colony Main Rd, Samta Colony\nRaipur, Chhattisgarh 492001\nSamta Shopping Arcade', href:null },
-                { icon:'📞', label:'Phone',      val:'7471145013\n+91 62615 57175',  href:'tel:07714040459' },
+                { icon:'📞', label:'Phone',      val:'7471145013\n+91 62615 57175',  href:'tel:7471145013' },
                 { icon:'🕐', label:'Hours',      val:'Open daily until 8:30 PM',       href:null },
               ].map((c, i) => (
                 <div key={i} style={{ display: 'flex', gap: 16, marginBottom: 22 }}>
@@ -185,7 +185,7 @@ export const Order = () => (
           {[
             { icon:'🛒', title:'Shop Online',   desc:'Browse all products and checkout online', link:'/products', cta:'Browse Products' },
             { icon:'🥭', title:'Mangoes',       desc:'Explore all 7 mango varieties',          link:'/mangoes',  cta:'See Mangoes' },
-            { icon:'📞', title:'Call Us',       desc:'7471145013 — quick orders by phone',   link:'tel:07714040459', cta:'Call Now', ext:true },
+            { icon:'📞', title:'Call Us',       desc:'7471145013 — quick orders by phone',   link:'tel:7471145013', cta:'Call Now', ext:true },
             { icon:'✉️', title:'Enquiry Form',  desc:'Send us a message, we\'ll call back',    link:'/contact',  cta:'Send Message' },
           ].map((item, i) => (
             item.ext ? (
@@ -216,7 +216,7 @@ export const Order = () => (
           <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 28, color: 'var(--ink)', marginBottom: 10 }}>Quick Order by Phone</h3>
           <p style={{ color: 'var(--ink-soft)', marginBottom: 28, fontSize: 15 }}>Call us and our team will take your order and arrange delivery</p>
           <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="tel:07714040459" className="btn btn-forest btn-lg">📞 7471145013</a>
+            <a href="tel:7471145013" className="btn btn-forest btn-lg">📞 7471145013</a>
             <a href="tel:+916261557175" className="btn btn-outline btn-lg">📞 +91 62615 57175</a>
           </div>
           <div style={{ marginTop: 18, fontSize: 13, color: 'var(--ink-soft)' }}>Open daily · Until 8:30 PM · Samta Shopping Arcade</div>
