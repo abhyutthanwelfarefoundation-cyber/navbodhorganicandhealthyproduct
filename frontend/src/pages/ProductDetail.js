@@ -141,7 +141,7 @@ const ProductDetail = () => {
                   </Link>
                 </>
               ) : (
-                <a href="tel:07714040459" className="btn btn-forest btn-lg">📞 Call to Enquire</a>
+                <a href="tel:7471145013" className="btn btn-forest btn-lg">📞 Call to Enquire</a>
               )}
 
               {/* Delivery info */}
