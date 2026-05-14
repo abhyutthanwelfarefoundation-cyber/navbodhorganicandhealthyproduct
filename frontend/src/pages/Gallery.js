@@ -14,20 +14,143 @@ const loadAsset = (p) => { try { return require(`../assets/${p}`); } catch { ret
    GALLERY ITEMS  — edit titles/captions
 ══════════════════════════════════════ */
 const GALLERY_ITEMS = [
-  { id:1,  type:'image', src:loadAsset('cow1.jpeg'),          title:'Our Farm Cows',         caption:'Our A2 cows — the source of pure desi ghee and fresh milk' },
-  { id:2,  type:'image', src:loadAsset('cow2.jpeg'),          title:'Happy Cows',             caption:'Healthy, happy cows raised naturally on our organic farm' },
-  { id:3,  type:'image', src:loadAsset('tree1.jpeg'),         title:'Mango Orchard',          caption:'Our mango orchards at peak season — naturally grown' },
-  { id:4,  type:'image', src:loadAsset('tree3.jpeg'),         title:'Orchard View',           caption:'Green mango trees — no chemicals, no pesticides' },
-  { id:5,  type:'image', src:loadAsset('desi ghee.png'),      title:'Pure Desi Ghee',         caption:'Hand-churned A2 ghee using traditional Bilona method' },
-  { id:6,  type:'image', src:loadAsset('freshmilk.png'),      title:'Fresh Farm Milk',        caption:'Pure unadulterated farm-fresh milk delivered daily' },
-  { id:7,  type:'image', src:loadAsset('jackfruit.png'),      title:'Organic Jackfruit',      caption:"Nature's meat alternative — fresh from our farm" },
-  { id:8,  type:'image', src:loadAsset('Langdamango.png'),    title:'Langda Mangoes',         caption:'Naturally ripened Langda mangoes from Varanasi' },
-  { id:9,  type:'image', src:loadAsset('Amrpalimangoes.png'), title:'Amrapali Mangoes',       caption:'Deep orange pulp — regular bearers all season' },
-  { id:10, type:'image', src:loadAsset('lemon.png'),          title:'Organic Lemons',         caption:'Juicy Vitamin C rich lemons from our garden' },
-  { id:11, type:'image', src:loadAsset('Kaju.png'),           title:'Premium Cashews',        caption:'Whole cashews — naturally dried, premium grade' },
-  { id:12, type:'image', src:loadAsset('star fruit.png'),     title:'Star Fruit',             caption:'Exotic tropical star fruit full of antioxidants' },
-  { id:13, type:'video', src:loadAsset('tree2.mp4'),          title:'Farm Tour',              caption:'A walk through our organic mango orchard' },
-  { id:14, type:'video', src:loadAsset('cow3.mp4'),           title:'Our A2 Cows',            caption:'Meet the A2 cows behind our pure desi ghee' },
+   {
+    id: 1,
+    type: 'image',
+    src: loadAsset('farm8.jpeg'),
+    title: 'Green Organic Fields',
+    caption: 'Beautiful green fields and healthy crops from our Raipur farm'
+  },
+  
+  {
+    id: 2,
+    type: 'image',
+    src: loadAsset('cow2.jpeg'),
+    title: 'Happy Dairy Cows',
+    caption: 'Naturally cared-for cows grazing peacefully in Raipur, CG'
+  },
+  {
+    id: 3,
+    type: 'image',
+    src: loadAsset('tree1.jpeg'),
+    title: 'Raipur Mango Orchard',
+    caption: 'Fresh organic mango trees grown naturally in Raipur, Chhattisgarh'
+  },
+  {
+    id: 4,
+    type: 'image',
+    src: loadAsset('tree3.jpeg'),
+    title: 'Green Orchard View',
+    caption: 'Lush green fruit orchards maintained without chemicals or pesticides'
+  },
+  {
+    id: 5,
+    type: 'image',
+    src: loadAsset('farm9.jpeg'),
+    title: 'Pure Desi Ghee',
+    caption: 'Traditional Bilona A2 desi ghee prepared fresh at our Raipur farm'
+  },
+  {
+    id: 6,
+    type: 'image',
+    src: loadAsset('cow4.jpeg'),
+    title: 'Fresh A2 Milk',
+    caption: 'Farm-fresh A2 milk sourced daily from healthy cows in Raipur'
+  },
+  {
+    id: 7,
+    type: 'image',
+    src: loadAsset('cow5.jpeg'),
+    title: 'Organic Farm Produce',
+    caption: 'Naturally grown fresh produce harvested directly from our farm'
+  },
+  {
+    id: 8,
+    type: 'image',
+    src: loadAsset('cow6.jpeg'),
+    title: 'Natural Mango Harvest',
+    caption: 'Sweet naturally ripened mangoes grown with organic farming methods'
+  },
+  {
+    id: 9,
+    type: 'image',
+    src: loadAsset('cow7.jpeg'),
+    title: 'Fresh Seasonal Mangoes',
+    caption: 'Premium quality seasonal mangoes from our Raipur orchards'
+  },
+  {
+    id: 10,
+    type: 'image',
+    src: loadAsset('cow8.jpeg'),
+    title: 'Organic Lemons',
+    caption: 'Juicy farm-grown lemons rich in freshness and natural Vitamin C'
+  },
+  {
+    id: 11,
+    type: 'image',
+    src: loadAsset('farm4.jpeg'),
+    title: 'Premium Farm Cashews',
+    caption: 'Naturally dried premium cashews sourced from trusted organic farming'
+  },
+  {
+    id: 12,
+    type: 'image',
+    src: loadAsset('farm5.jpeg'),
+    title: 'Fresh Star Fruit',
+    caption: 'Exotic tropical star fruit freshly harvested from our Raipur farm'
+  },
+  {
+    id: 13,
+    type: 'image',
+    src: loadAsset('farm6.jpeg'),
+    title: 'Organic Farm View',
+    caption: 'A peaceful glimpse of our naturally maintained farm surroundings'
+  },
+  {
+    id: 14,
+    type: 'image',
+    src: loadAsset('farm 7.jpeg'),
+    title: 'Fresh Farm Harvest',
+    caption: 'Seasonal organic harvest cultivated with natural farming practices'
+  },
+   {
+    id: 15,
+    type: 'image',
+    src: loadAsset('cow1.jpeg'),
+    title: 'Raipur Farm Cows',
+    caption: 'Healthy A2 cows raised naturally at our farm in Raipur, Chhattisgarh'
+  },
+
+  {
+    id: 16,
+    type: 'video',
+    src: loadAsset('tree2.mp4'),
+    title: 'Raipur Farm Tour',
+    caption: 'Take a walk through our organic farm and mango orchards in Raipur'
+  },
+  {
+    id: 17,
+    type: 'video',
+    src: loadAsset('cow3.mp4'),
+    title: 'Our A2 Cow Farm',
+    caption: 'Meet the healthy A2 cows behind our pure dairy products'
+  },
+
+   {
+    id: 18,
+    type: 'video',
+    src: loadAsset('gheevideo1.mp4'),
+    title: 'Our A2 Cow Farm',
+    caption: 'Meet the healthy A2 cows behind our pure dairy products'
+  },
+   {
+    id: 19,
+    type: 'video',
+    src: loadAsset('gheevideo2.mp4'),
+    title: 'Our A2 Cow Farm',
+    caption: 'Meet the healthy A2 cows behind our pure dairy products'
+  },
+ 
 ].filter(item => Boolean(item.src));
 
 const TABS = [

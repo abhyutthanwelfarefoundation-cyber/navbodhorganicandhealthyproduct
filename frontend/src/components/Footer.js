@@ -12,9 +12,9 @@ const Footer = () => (
         {/* Brand */}
         <div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
-            {LogoImg
+            {/* {LogoImg
               ? <img src={LogoImg} alt="Navbodh" style={{ height: 44, filter: 'brightness(4)' }} />
-              : <span style={{ fontSize: 28 }}>🌿</span>}
+              : <span style={{ fontSize: 28 }}>🌿</span>} */}
             <div>
               <div style={{ fontFamily: 'var(--font-display)', fontSize: 20, fontWeight: 700, lineHeight: 1.1 }}>Navbodh</div>
               <div style={{ fontSize: 9, opacity: 0.5, letterSpacing: '0.14em', textTransform: 'uppercase', marginTop: 2 , color: 'white', }}>Organic & Healthy Products</div>
@@ -81,7 +81,7 @@ const Footer = () => (
 
       {/* Bottom bar */}
       <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', padding: '20px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
-        <div style={{ fontSize: 12, opacity: 0.4 }}>© 2026 Navbodh Organic & Healthy Products. Made with 💚 in Raipur.</div>
+        <div style={{ fontSize: 12, opacity: 0.4 }}>© 2026 Navbodh Organic & Healthy Products. All Rights Reserved</div>
         <div style={{ fontSize: 12, opacity: 0.4 }}>Developed by Naman Jain</div>
       </div>
     </div>

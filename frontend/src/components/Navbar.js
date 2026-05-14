@@ -15,8 +15,8 @@ import {
 import { IoLeafOutline } from 'react-icons/io5';
 import { BsBoxSeam } from 'react-icons/bs';
 
-let LogoImg = null;
-try { LogoImg = require('../assets/logo2.png'); } catch {}
+// let LogoImg = null;
+// try { LogoImg = require('../assets/logo2.png'); } catch {}
 
 const LINKS = [
   { to: '/',         label: 'Home',     Icon: MdStorefront   },
@@ -56,10 +56,10 @@ const Navbar = () => {
 
           {/* Logo */}
           <Link to="/" className="nav-logo" onClick={() => setOpen(false)}>
-            {LogoImg
+            {/* {LogoImg
               ? <img src={LogoImg} alt="Navbodh Organic" />
               : <GiLeafSwirl size={36} color="var(--forest)" />
-            }
+            } */}
             <div className="nav-logo-text" style={{ display: 'flex', flexDirection: 'column' }}>
               <span className="nav-logo-name">Navbodh</span>
               <span className="nav-logo-tag">Organic &amp; Healthy Products</span>

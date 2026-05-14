@@ -28,8 +28,6 @@ function App() {
             <Route path="/products/:id"  element={<ProductDetail />} />
             <Route path="/mangoes"       element={<MangoesPage />} />
             <Route path="/gallery"       element={<Gallery />} />
-
-
             <Route path="/cart"          element={<Cart />} />
             <Route path="/checkout"      element={<Checkout />} />
             <Route path="/order-success" element={<OrderSuccess />} />
