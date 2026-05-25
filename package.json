@@ -10,6 +10,7 @@
     "build": "npm run build --prefix frontend"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "concurrently": "^8.2.2"
   }
 }

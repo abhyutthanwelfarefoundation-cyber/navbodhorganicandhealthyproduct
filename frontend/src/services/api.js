@@ -1,8 +1,14 @@
 import axios from 'axios';
+import emailjs from '@emailjs/browser';
 
 const API = axios.create({ baseURL: process.env.REACT_APP_API_URL || '/api' });
 
-// Static product data (fallback when backend isn't connected)
+// ─── EmailJS config ── replace with your real keys from emailjs.com ───
+const EMAILJS_SERVICE_ID  = 'service_n7gjyhg';  
+const EMAILJS_TEMPLATE_ID = 'template_xq48lbh'; 
+const EMAILJS_PUBLIC_KEY  = 'rAeYi3QJMOORI1p4U'; 
+// ──────────────────────────────────────────────────────────────────────
+
 export const STATIC_PRODUCTS = [
   { _id: '1', name: 'Dasheri Mango', category: 'mango', emoji: '🥭', origin: 'Uttar Pradesh', badge: 'Sweet & Fibrous', description: 'The king of mangoes from UP — intensely sweet, silky smooth, and absolutely fibrous-free. Hand-picked at perfect ripeness.', price: 180, unit: 'kg', featured: true, tags: ['bestseller', 'sweet'], inStock: true },
   { _id: '2', name: 'Banganapalli', category: 'mango', emoji: '🥭', origin: 'Andhra Pradesh', badge: 'Large & Juicy', description: 'Large, golden-yellow mangoes with a thin skin and rich, juicy pulp. A South Indian classic loved for its mild sweetness.', price: 160, unit: 'kg', tags: ['juicy', 'large'], inStock: true },
@@ -26,7 +32,7 @@ export const getProducts = async (params = {}) => {
   } catch {
     let data = STATIC_PRODUCTS;
     if (params.category) data = data.filter(p => p.category === params.category);
-    if (params.featured) data = data.filter(p => p.featured);
+    if (params.featured)  data = data.filter(p => p.featured);
     return data;
   }
 };
@@ -45,13 +51,21 @@ export const createOrder = async (orderData) => {
   return res.data;
 };
 
+// ── Skips backend entirely, sends directly via EmailJS ──
 export const submitEnquiry = async (data) => {
-  try {
-    const res = await API.post('/enquiry', data);
-    return res.data;
-  } catch {
-    return { success: true, message: "Enquiry received! We'll contact you soon." };
-  }
+  const result = await emailjs.send(
+    EMAILJS_SERVICE_ID,
+    EMAILJS_TEMPLATE_ID,
+    {
+      name:    data.name,
+      phone:   data.phone,
+      product: data.product || '—',
+      message: data.message || '—',
+    },
+    EMAILJS_PUBLIC_KEY,
+  );
+  if (result.status !== 200) throw new Error('EmailJS failed');
+  return { success: true };
 };
 
 export default API;
