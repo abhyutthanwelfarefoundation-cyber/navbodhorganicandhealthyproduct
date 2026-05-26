@@ -69,7 +69,6 @@ const Footer = () => (
             <div style={{ marginBottom: 12 }}>
               <div style={{ fontWeight: 700, opacity: 1, marginBottom: 3 }}>📞 Phone</div>
               <a href="tel:7471145013" style={{ display: 'block' }}>7471145013</a>
-              <a href="tel:+916261557175" style={{ display: 'block' }}>+91 62615 57175</a>
             </div>
             <div>
               <div style={{ fontWeight: 700, opacity: 1, marginBottom: 3 }}>🕐 Hours</div>

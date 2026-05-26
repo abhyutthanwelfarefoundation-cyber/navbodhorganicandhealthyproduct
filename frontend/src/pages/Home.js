@@ -564,7 +564,7 @@ const Home = () => {
               </motion.h2>
               {[
                 { Icon: IoLocationSharp, label: 'Address', val: 'Samta Colony Main Rd, Samta Colony\nRaipur, CG 492001 · Samta Shopping Arcade', href: null },
-                { Icon: MdPhone,         label: 'Phone',   val: '7471145013\n+91 62615 57175', href: 'tel:7471145013' },
+                { Icon: MdPhone,         label: 'Phone',   val: '7471145013', href: 'tel:7471145013' },
                 { Icon: IoTimeOutline,   label: 'Hours',   val: 'Open daily until 8:30 PM', href: null },
               ].map(({ Icon, label, val, href }, i) => (
                 <motion.div key={i} variants={fadeUp} style={{ display: 'flex', gap: 16, marginBottom: 22 }}>

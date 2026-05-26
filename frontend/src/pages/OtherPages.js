@@ -184,7 +184,7 @@ export const Contact = () => {
               </div>
               {[
                 { icon:'📍', label:'Address', val:'Samta Colony Main Rd, Samta Colony\nRaipur, Chhattisgarh 492001\nSamta Shopping Arcade', href:null },
-                { icon:'📞', label:'Phone',   val:'7471145013\n+91 62615 57175', href:'tel:7471145013' },
+                { icon:'📞', label:'Phone',   val:'7471145013', href:'tel:7471145013' },
                 { icon:'🕐', label:'Hours',   val:'Open daily until 8:30 PM', href:null },
               ].map((c, i) => (
                 <div key={i} style={{ display: 'flex', gap: 16, marginBottom: 22 }}>
@@ -317,7 +317,6 @@ export const Order = () => (
           <p style={{ color: 'var(--ink-soft)', marginBottom: 28, fontSize: 15 }}>Call us and our team will take your order and arrange delivery</p>
           <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href="tel:7471145013" className="btn btn-forest btn-lg">📞 7471145013</a>
-            <a href="tel:+916261557175" className="btn btn-outline btn-lg">📞 +91 62615 57175</a>
           </div>
           <div style={{ marginTop: 18, fontSize: 13, color: 'var(--ink-soft)' }}>Open daily · Until 8:30 PM · Samta Shopping Arcade</div>
         </div>
