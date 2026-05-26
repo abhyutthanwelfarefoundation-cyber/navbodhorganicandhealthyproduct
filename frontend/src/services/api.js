@@ -28,6 +28,8 @@ export const STATIC_PRODUCTS = [
 export const getProducts = async (params = {}) => {
   try {
     const res = await API.get('/products', { params });
+    // If backend returns empty or broken, use static
+    if (!res.data || res.data.length === 0) throw new Error('empty');
     return res.data;
   } catch {
     let data = STATIC_PRODUCTS;
@@ -40,11 +42,14 @@ export const getProducts = async (params = {}) => {
 export const getProduct = async (id) => {
   try {
     const res = await API.get(`/products/${id}`);
+    // Backend returns MongoDB doc — check it has a name
+    if (!res.data || !res.data.name) throw new Error('incomplete');
     return res.data;
   } catch {
+    // Always fall back to static data using simple _id match
     return STATIC_PRODUCTS.find(p => p._id === id);
   }
-};
+};  
 
 export const createOrder = async (orderData) => {
   const res = await API.post('/orders', orderData);
