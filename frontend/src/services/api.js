@@ -3,11 +3,11 @@ import emailjs from '@emailjs/browser';
 
 const API = axios.create({ baseURL: process.env.REACT_APP_API_URL || '/api' });
 
-// ─── EmailJS config ── replace with your real keys from emailjs.com ───
-const EMAILJS_SERVICE_ID  = 'service_n7gjyhg';  
-const EMAILJS_TEMPLATE_ID = 'template_xq48lbh'; 
-const EMAILJS_PUBLIC_KEY  = 'rAeYi3QJMOORI1p4U'; 
-// ──────────────────────────────────────────────────────────────────────
+// ─── EmailJS config ───────────────────────────────────────────────
+const EMAILJS_SERVICE_ID  = 'service_n7gjyhg';
+const EMAILJS_TEMPLATE_ID = 'template_xq48lbh';
+const EMAILJS_PUBLIC_KEY  = 'rAeYi3QJMOORI1p4U';
+// ──────────────────────────────────────────────────────────────────
 
 export const STATIC_PRODUCTS = [
   { _id: '1', name: 'Dasheri Mango', category: 'mango', emoji: '🥭', origin: 'Uttar Pradesh', badge: 'Sweet & Fibrous', description: 'The king of mangoes from UP — intensely sweet, silky smooth, and absolutely fibrous-free. Hand-picked at perfect ripeness.', price: 180, unit: 'kg', featured: true, tags: ['bestseller', 'sweet'], inStock: true },
@@ -51,7 +51,7 @@ export const createOrder = async (orderData) => {
   return res.data;
 };
 
-// ── Skips backend entirely, sends directly via EmailJS ──
+// ── Sends directly via EmailJS, skips backend ──
 export const submitEnquiry = async (data) => {
   const result = await emailjs.send(
     EMAILJS_SERVICE_ID,
@@ -59,6 +59,7 @@ export const submitEnquiry = async (data) => {
     {
       name:    data.name,
       phone:   data.phone,
+      email:   data.email  || '—',   // ← only change: email added
       product: data.product || '—',
       message: data.message || '—',
     },
