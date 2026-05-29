@@ -33,7 +33,7 @@ export const WhyUs = () => {
   const ITEMS = [
     { icon:'🌿', title:'100% Organic', desc:'No pesticides, no synthetic chemicals. Every product is grown with nature — certified and transparent.', img:'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=700&q=80' },
     { icon:'🚜', title:'Direct from Farm', desc:'No middlemen, no cold storage delays. We source directly from trusted farmers for maximum freshness and fair prices.', img:'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=700&q=80' },
-    { icon:'⚡', title:'Fresh Delivery', desc:'Products delivered at peak freshness every day across Raipur and surrounding areas — because freshness is everything.', img:'https://images.unsplash.com/photo-1542838132-92c53300491e?w=700&q=80' },
+    { icon:'⚡', title:'Fresh Delivery', desc:'Products delivered at peak freshness every day across Raipur and surrounding areas — because freshness is everything.', img:'https://images.pexels.com/photos/4418675/pexels-photo-4418675.jpeg' },
     { icon:'💚', title:'Trusted Quality', desc:'3.8★ Google rating, hundreds of happy families. Quality you can taste in every mango, every drop of ghee.', img:'https://images.unsplash.com/photo-1631209121750-a9f656d28f24?w=700&q=80' },
   ];
 
@@ -61,7 +61,7 @@ export const WhyUs = () => {
               </div>
               <div style={{ order: i % 2 === 0 ? 1 : 0, borderRadius: 24, overflow: 'hidden', boxShadow: 'var(--shadow-lg)', aspectRatio: '4/3' }}>
                 <img src={item.img} alt={item.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-                  onError={e => { e.target.src = 'https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&q=80'; }} />
+                  onError={e => { e.target.src = 'https://preview.redd.it/cow-with-calf-in-india-v0-op0xntc144la1.png?auto=webp&s=a6c34433765a918997349ce767f4c929e84a84cf'; }} />
               </div>
             </div>
           </div>
@@ -183,7 +183,7 @@ export const Contact = () => {
                 <iframe title="Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14874.01!2d81.6337!3d21.2514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDE1JzA1LjAiTiA4McKwMzgnMDEuMiJF!5e0!3m2!1sen!2sin!4v1" width="100%" height="280" style={{ border: 0, display: 'block' }} allowFullScreen loading="lazy" />
               </div>
               {[
-                { icon:'📍', label:'Address', val:'Samta Colony Main Rd, Samta Colony\nRaipur, Chhattisgarh 492001\nSamta Shopping Arcade', href:null },
+                { icon:'📍', label:'Address', val:'Okinawa Showroom Buliding , 1st Floor , Bangrang Nagar Main Rd,\nRaipur, Chhattisgarh 492001', href:null },
                 { icon:'📞', label:'Phone',   val:'7471145013', href:'tel:7471145013' },
                 { icon:'🕐', label:'Hours',   val:'Open daily until 8:30 PM', href:null },
               ].map((c, i) => (
@@ -197,7 +197,7 @@ export const Contact = () => {
                   </div>
                 </div>
               ))}
-              <a href="https://maps.google.com/?q=Samta+Colony+Raipur" target="_blank" rel="noopener noreferrer" className="btn btn-forest" style={{ marginTop: 10 }}>📍 Open in Google Maps</a>
+              <a href="https://www.google.com/maps/place/Okinawa/@21.24398,81.6232361,17z/data=!3m1!4b1!4m6!3m5!1s0x3a28dd05fc03a045:0xf5a4920e07656bd8!8m2!3d21.243975!4d81.625811!16s%2Fg%2F11ld58tm8q?entry=ttu&g_ep=EgoyMDI2MDUyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="btn btn-forest" style={{ marginTop: 10 }}>📍 Open in Google Maps</a>
             </div>
 
             {/* Form with validation */}

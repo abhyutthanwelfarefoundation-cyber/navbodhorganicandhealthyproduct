@@ -131,9 +131,11 @@ const ProductDetail = () => {
                         onMouseEnter={e => e.target.style.background = 'var(--forest-mist)'}
                         onMouseLeave={e => e.target.style.background = 'var(--cream)'}>+</button>
                     </div>
-                    <button onClick={addToCart} className="btn btn-forest btn-lg" style={{ flex: 1, minWidth: 180 }}>
-                      🛒 Add to Cart — ₹{product.price * qty}
-                    </button>
+                    <button onClick={addToCart} className="btn btn-forest btn-lg"
+  disabled={!product.inStock}
+  style={{ flex: 1, minWidth: 180, opacity: product.inStock ? 1 : 0.6, cursor: product.inStock ? 'pointer' : 'not-allowed' }}>
+  {product.inStock ? `🛒 Add to Cart — ₹${product.price * qty}` : '❌ Out of Stock'}
+</button>
                   </div>
 
                   <Link to="/checkout" className="btn btn-outline" style={{ width: '100%', justifyContent: 'center' }}>

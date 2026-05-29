@@ -14,8 +14,8 @@ import Cart          from './pages/Cart';
 import Checkout      from './pages/Checkout';
 import { OrderSuccess, WhyUs, Contact, Order } from './pages/OtherPages';
 import ScrollToTop from './components/ScrollToTop';
-
-function App() {
+                  
+function App() {         
   return (
     <BrowserRouter>
       <CartProvider>               

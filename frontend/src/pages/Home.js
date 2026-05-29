@@ -563,7 +563,7 @@ const Home = () => {
                 Visit or Call Us Today
               </motion.h2>
               {[
-                { Icon: IoLocationSharp, label: 'Address', val: 'Samta Colony Main Rd, Samta Colony\nRaipur, CG 492001 · Samta Shopping Arcade', href: null },
+                { Icon: IoLocationSharp, label: 'Address', val: 'Okinawa Showroom Buliding , 1st Floor , Bangrang Nagar Main Rd,\nRaipur, Chhattisgarh 492001', href: null },
                 { Icon: MdPhone,         label: 'Phone',   val: '7471145013', href: 'tel:7471145013' },
                 { Icon: IoTimeOutline,   label: 'Hours',   val: 'Open daily until 8:30 PM', href: null },
               ].map(({ Icon, label, val, href }, i) => (
@@ -580,7 +580,7 @@ const Home = () => {
                 </motion.div>
               ))}
               <motion.div variants={fadeUp} whileHover={{ scale: 1.03 }}>
-                <a href="https://maps.google.com/?q=Samta+Colony+Raipur" target="_blank" rel="noopener noreferrer"
+               <a href="https://maps.app.goo.gl/Wt4u1rJh9xZoabLaA " target="_blank" rel="noopener noreferrer"
                   className="btn btn-forest" style={{ marginTop: 12, display: 'inline-flex', alignItems: 'center', gap: 9 }}>
                   <IoLocationSharp size={16} /> Open in Google Maps
                 </a>

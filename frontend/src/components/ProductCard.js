@@ -103,6 +103,16 @@ const ProductCard = ({ product, showAdd = true, index = 0 }) => {
             />
             {product.badge && <span className="product-badge">{product.badge}</span>}
             {product.featured && <span className="product-featured-badge">Featured</span>}
+{product.inStock && product.badge && <span className="product-badge">{product.badge}</span>}
+{product.inStock && product.featured && <span className="product-featured-badge">Featured</span>}
+{!product.inStock && (
+  <span style={{
+    position: 'absolute', top: 12, left: 12,
+    background: '#dc2626', color: 'white',
+    padding: '4px 10px', borderRadius: 100,
+    fontSize: 11, fontWeight: 700, letterSpacing: '0.05em',
+  }}>Out of Stock</span>
+)}
           </div>
 
           {/* Body */}
@@ -130,12 +140,13 @@ const ProductCard = ({ product, showAdd = true, index = 0 }) => {
                   <div style={{ fontSize: 13, color: 'var(--ink-soft)' }}>Enquire for price</div>
                 )}
               </div>
-              {showAdd && product.price && (
-                <button className="add-btn" onClick={handleAdd}>
-                  <MdAddShoppingCart size={15} />
-                  Add
-                </button>
-              )}
+            {showAdd && product.price && (
+  <button className="add-btn" onClick={handleAdd}
+    disabled={!product.inStock}
+    style={{ opacity: product.inStock ? 1 : 0.5, cursor: product.inStock ? 'pointer' : 'not-allowed' }}>
+    {product.inStock ? <><MdAddShoppingCart size={15} /> Add</> : 'Out of Stock'}
+  </button>
+)}
             </div>
           </div>
         </div>
