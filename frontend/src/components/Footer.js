@@ -63,8 +63,9 @@ const Footer = () => (
           <div style={{ fontSize: 13, lineHeight: 1.9, opacity: 0.7 }}>
             <div style={{ marginBottom: 12 }}>
               <div style={{ fontWeight: 700, opacity: 1, marginBottom: 3 }}>📍 Address</div>
-              Samta Colony Main Rd<br/>Raipur, CG 492001<br/>
-              <span style={{ opacity: 0.7 }}>Samta Shopping Arcade</span>
+    
+              Okinawa Showroom Buliding , 1st Floor , Bangrang Nagar Main Rd, Raipur Chhattisgarh 492001
+    
             </div>
             <div style={{ marginBottom: 12 }}>
               <div style={{ fontWeight: 700, opacity: 1, marginBottom: 3 }}>📞 Phone</div>
@@ -72,16 +73,16 @@ const Footer = () => (
             </div>
             <div>
               <div style={{ fontWeight: 700, opacity: 1, marginBottom: 3 }}>🕐 Hours</div>
-              Open daily until 8:30 PM
+              Open daily until 6:30 PM
             </div>
           </div>
         </div>
       </div>
 
       {/* Bottom bar */}
-      <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', padding: '20px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
+      <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', padding: '20px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 , color: 'white'}}>
         <div style={{ fontSize: 12, opacity: 0.4 }}>© 2026 Navbodh Organic & Healthy Products. All Rights Reserved</div>
-        <div style={{ fontSize: 12, opacity: 0.4 }}>Developed by Naman Jain</div>
+        <div style={{ fontSize: 12, opacity: 0.4 }}>Developed by <a href="https://namanjainottportfolio.netlify.app/"> <b>Naman Jain</b></a> </div>
       </div>
     </div>
   </footer>
