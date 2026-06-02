@@ -34,7 +34,7 @@ export const WhyUs = () => {
     { icon:'🌿', title:'100% Organic', desc:'No pesticides, no synthetic chemicals. Every product is grown with nature — certified and transparent.', img:'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=700&q=80' },
     { icon:'🚜', title:'Direct from Farm', desc:'No middlemen, no cold storage delays. We source directly from trusted farmers for maximum freshness and fair prices.', img:'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=700&q=80' },
     { icon:'⚡', title:'Fresh Delivery', desc:'Products delivered at peak freshness every day across Raipur and surrounding areas — because freshness is everything.', img:'https://images.pexels.com/photos/4418675/pexels-photo-4418675.jpeg' },
-    { icon:'💚', title:'Trusted Quality', desc:'3.8★ Google rating, hundreds of happy families. Quality you can taste in every mango, every drop of ghee.', img:'https://images.unsplash.com/photo-1631209121750-a9f656d28f24?w=700&q=80' },
+    { icon:'💚', title:'Trusted Quality', desc:'3.8★ Google rating, hundreds of happy families. Quality you can taste in every mango, every drop of ghee.', img:'https://media.istockphoto.com/id/1220128734/photo/cow-feeding-milk-to-newborn-calf.webp?b=1&s=170667a&w=0&k=20&c=GcyBGiM4w1chzz9AUIKzIrcJpT6xxLdIOHhSmt53Va0=' },
   ];
 
   return (
