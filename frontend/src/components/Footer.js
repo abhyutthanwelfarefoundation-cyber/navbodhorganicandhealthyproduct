@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 let LogoImg = null;
-try { LogoImg = require('../assets/logo2.png'); } catch {}
+// try { LogoImg = require('../assets/logo2.png'); } catch {}
 
 const Footer = () => (
   <footer style={{ background: '#1e2b1f', color: 'white', paddingTop: 'clamp(48px,7vw,80px)' }}>
@@ -88,4 +88,4 @@ const Footer = () => (
   </footer>
 );
 
-export default Footer;
+export default Footer; 

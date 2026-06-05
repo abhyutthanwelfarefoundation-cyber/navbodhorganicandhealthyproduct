@@ -18,7 +18,7 @@ import { HiOutlineSparkles } from 'react-icons/hi';
 /* local assets */
 const loadImg = (p) => { try { return require(`../assets/${p}`); } catch { return null; } };
 const HeroBg     = loadImg('Dasherimango.png')   || 'https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?w=1400&q=90';
-const GheeImg    = loadImg('desi ghee2.png')       || 'https://images.unsplash.com/photo-1631209121750-a9f656d28f24?w=700&q=80';
+const GheeImg    = loadImg('ghee.png')       || 'https://images.unsplash.com/photo-1631209121750-a9f656d28f24?w=700&q=80';
 const VARIETIES  = [
   { name: 'Dasheri',      origin: 'Uttar Pradesh',  badge: 'Sweet & Fibrous',   img: loadImg('Dasherimango.png') },
   { name: 'Banganapalli', origin: 'Andhra Pradesh', badge: 'Large & Juicy',     img: loadImg('Banganapallimango.png') },

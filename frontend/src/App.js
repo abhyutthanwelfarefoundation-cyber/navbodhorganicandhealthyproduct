@@ -9,17 +9,18 @@ import Home          from './pages/Home';
 import Products      from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
 import MangoesPage   from './pages/Mangoes';
-import Gallery from './pages/Gallery';
+import Gallery       from './pages/Gallery';
 import Cart          from './pages/Cart';
 import Checkout      from './pages/Checkout';
-import { OrderSuccess, WhyUs, Contact, Order } from './pages/OtherPages';
-import ScrollToTop from './components/ScrollToTop';
-                  
-function App() {         
+import OrderSuccess  from './pages/OrderSuccess';
+import { WhyUs, Contact, Order } from './pages/OtherPages';
+import ScrollToTop   from './components/ScrollToTop';
+
+function App() {
   return (
     <BrowserRouter>
-      <CartProvider>               
-         <ScrollToTop />  
+      <CartProvider>
+        <ScrollToTop />
         <Navbar />
         <main>
           <Routes>
