@@ -143,13 +143,13 @@ const GALLERY_ITEMS = [
     title: 'Our A2 Cow Farm',
     caption: 'Meet the healthy A2 cows behind our pure dairy products'
   },
-  //  {
-  //   id: 19,
-  //   type: 'video',
-  //   src: loadAsset('gheevideo2.mp4'),
-  //   title: 'Our A2 Cow Farm',
-  //   caption: 'Meet the healthy A2 cows behind our pure dairy products'
-  // },
+   {
+    id: 19,
+    type: 'video',
+    src: loadAsset('cow 5.mp4'),
+    title: 'Our A2 Cow Farm',
+    caption: 'Meet the healthy A2 cows behind our pure dairy products'
+  },
  
 ].filter(item => Boolean(item.src));
 
