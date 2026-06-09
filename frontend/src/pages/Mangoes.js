@@ -187,9 +187,9 @@ const MangoesPage = () => {
             </motion.p>
             <motion.div variants={fadeUp} style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
-                <a href="tel:07714040459" className="btn btn-beige btn-lg"
+                <a href="tel:7471145013" className="btn btn-beige btn-lg"
                   style={{ display: 'flex', alignItems: 'center', gap: 9 }}>
-                  <MdPhone size={18} /> 077140 40459
+                  <MdPhone size={18} /> 747 114 5013
                 </a>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
