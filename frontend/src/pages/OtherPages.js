@@ -318,9 +318,9 @@ export const Order = () => (
           <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href="tel:7471145013" className="btn btn-forest btn-lg">📞 7471145013</a>
           </div>
-          <div style={{ marginTop: 18, fontSize: 13, color: 'var(--ink-soft)' }}>Open daily · Until 6:30 PM ·Okinawa Showroom Buliding</div>
+          <div style={{ marginTop: 18, fontSize: 13, color: 'var( --ink-soft)' }}>Open daily · Until 6:30 PM ·Okinawa Showroom Buliding</div>
         </div>
       </div>
     </section>
   </div>
-);
+);  
