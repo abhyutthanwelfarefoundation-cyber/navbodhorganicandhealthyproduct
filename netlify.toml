@@ -2,7 +2,11 @@
   command = "npm --prefix frontend install && npm --prefix frontend run build"
   publish = "frontend/build"
 
+[[edge_functions]]
+  path    = "/products/:id"
+  function = "og"
+
 [[redirects]]
-  from = "/*"
-  to   = "/index.html"
+  from   = "/*"
+  to     = "/index.html"
   status = 200

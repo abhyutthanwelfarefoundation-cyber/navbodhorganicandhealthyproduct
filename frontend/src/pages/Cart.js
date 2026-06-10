@@ -204,7 +204,7 @@ const Cart = () => {
                 {/* Delivery */}
                 <div style={{ display:'flex', justifyContent:'space-between', marginBottom:10, fontSize:13, color:'var(--ink-soft)' }}>
                   <span>Delivery</span>
-                  <span style={{ color:'var(--forest)', fontWeight:700 }}>FREE</span>
+                  <span style={{ color:'var(--forest)', fontWeight:700 }}>Depends On Distance</span>
                 </div>
 
                 {/* Total */}
@@ -230,7 +230,7 @@ const Cart = () => {
 
             {/* Trust badges */}
             <div style={{ marginTop:14, display:'flex', gap:10, justifyContent:'center', flexWrap:'wrap' }}>
-              {['🔒 Secure', '🚚 Free Delivery', '🌿 Organic'].map((b,i) => (
+              {['🔒 Secure', '🚚 Fresh Delivery', '🌿 Organic'].map((b,i) => (
                 <span key={i} style={{ fontSize:11, fontWeight:600, color:'var(--ink-soft)', background:'var(--forest-mist)', padding:'5px 12px', borderRadius:100, border:'1px solid var(--border)' }}>
                   {b}
                 </span>

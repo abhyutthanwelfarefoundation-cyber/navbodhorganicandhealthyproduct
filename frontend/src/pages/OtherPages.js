@@ -185,7 +185,7 @@ export const Contact = () => {
               {[
                 { icon:'📍', label:'Address', val:'Okinawa Showroom Buliding , 1st Floor , Bangrang Nagar Main Rd,\nRaipur, Chhattisgarh 492001', href:null },
                 { icon:'📞', label:'Phone',   val:'7471145013', href:'tel:7471145013' },
-                { icon:'🕐', label:'Hours',   val:'Open daily until 8:30 PM', href:null },
+                { icon:'🕐', label:'Hours',   val:'Open daily until 6:30 PM', href:null },
               ].map((c, i) => (
                 <div key={i} style={{ display: 'flex', gap: 16, marginBottom: 22 }}>
                   <div style={{ width: 48, height: 48, borderRadius: 12, background: 'var(--forest-mist)', border: '1px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 20, flexShrink: 0 }}>{c.icon}</div>
@@ -318,7 +318,7 @@ export const Order = () => (
           <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href="tel:7471145013" className="btn btn-forest btn-lg">📞 7471145013</a>
           </div>
-          <div style={{ marginTop: 18, fontSize: 13, color: 'var(--ink-soft)' }}>Open daily · Until 8:30 PM · Samta Shopping Arcade</div>
+          <div style={{ marginTop: 18, fontSize: 13, color: 'var(--ink-soft)' }}>Open daily · Until 6:30 PM ·Okinawa Showroom Buliding</div>
         </div>
       </div>
     </section>

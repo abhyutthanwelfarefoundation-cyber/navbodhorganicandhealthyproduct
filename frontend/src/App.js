@@ -5,7 +5,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import { CartProvider } from './context/CartContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-
+import SisterConcerns from './pages/SisterConcerns';
 import Home          from './pages/Home';
 import Products      from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
@@ -37,6 +37,7 @@ function App() {
               <Route path="/why-us"        element={<WhyUs />} />
               <Route path="/contact"       element={<Contact />} />
               <Route path="/order"         element={<Order />} />
+              <Route path="/sister-concerns" element={<SisterConcerns />} />
             </Routes>
           </main>
           <Footer />

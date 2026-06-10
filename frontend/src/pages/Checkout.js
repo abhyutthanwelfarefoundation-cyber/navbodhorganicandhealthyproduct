@@ -764,7 +764,7 @@ const Checkout = () => {
                   >
                     <span>Delivery</span>
                     <span style={{ color: "var(--forest)", fontWeight: 700 }}>
-                      FREE 🎉
+                      Depends On Distance
                     </span>
                   </div>
                   <div
@@ -831,7 +831,7 @@ const Checkout = () => {
                       color: "var(--ink-soft)",
                     }}
                   >
-                    🔒 Safe & Secure · Free delivery in Raipur
+                    🔒 Safe & Secure · Currently Deliver Only Within Raipur
                   </div>
                 </div>
               </div>
@@ -860,3 +860,5 @@ const Checkout = () => {
 };
 
 export default Checkout;
+
+

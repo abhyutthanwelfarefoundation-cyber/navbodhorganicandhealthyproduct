@@ -11,6 +11,7 @@ import {
 import {
   MdStorefront, MdInfoOutline, MdLocationOn, MdPhone,
   MdPhoto,
+  MdGroup,
 } from 'react-icons/md';
 import { IoLeafOutline } from 'react-icons/io5';
 import { BsBoxSeam } from 'react-icons/bs';
@@ -22,9 +23,12 @@ const LINKS = [
   { to: '/',         label: 'Home',     Icon: MdStorefront   },
   { to: '/products', label: 'Products', Icon: IoLeafOutline  },
   { to: '/gallery',  label: 'Gallery',  Icon: MdPhoto   },
+  { to: '/sister-concerns',  label: 'Our Group',  Icon: MdGroup },
+
   { to: '/mangoes',  label: 'Mangoes',  Icon: MangoIcon       },  
   { to: '/why-us',   label: 'Why Us',   Icon: MdInfoOutline  },
   { to: '/contact',  label: 'Contact',  Icon: MdLocationOn   },
+
 
 ];
 
