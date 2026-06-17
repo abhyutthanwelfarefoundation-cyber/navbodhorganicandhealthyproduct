@@ -34,7 +34,7 @@ const HeroBg =
   loadImg("Dasherimango.png") ||
   "https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?w=1400&q=90";
 const GheeImg =
-  loadImg("ghee.png") ||
+  loadImg("desi ghee2.png") ||
   "https://images.unsplash.com/photo-1631209121750-a9f656d28f24?w=700&q=80";
 const VARIETIES = [
   {
@@ -68,7 +68,7 @@ const VARIETIES = [
     img: loadImg("TotaParimangoes.png"),
   },
   {
-    name: "Amrapali",
+    name: "Amrapali",        
     origin: "All India",
     badge: "Regular Bearer",
     img: loadImg("Amrpalimangoes.png"),

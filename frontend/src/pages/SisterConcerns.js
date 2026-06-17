@@ -15,30 +15,8 @@ const stagger = {
 };
 
 const CONCERNS = [
-  {
+    {
     id: 1,
-    name: 'Nikhil Agro Product',
-    project: 'Navbodh Tower',
-    tagline: 'Premium Commercial Complex · Shankar Nagar, Raipur',
-    category: 'Construction & Real Estate',
-    color: '#1a2c1c',
-    accent: '#e8d5b0',
-    bg: 'linear-gradient(135deg, #1a2c1c 0%, #2a4b2e 100%)',
-    icon: <TbBuildingSkyscraper size={28} />,
-    emoji: '🏢',
-    // status: 'Active',
-    // statusColor: '#16a34a',
-    description: 'Navbodh Tower is a modern, government-approved commercial complex designed to cater to the diverse needs of today\'s businesses. Strategically located in the bustling area of Shankar Nagar, Raipur (C.G.), it offers premium commercial spaces with excellent visibility, seamless connectivity, and world-class infrastructure.',
-    highlight: 'Cutting-edge design with flexible space options, poised to become the go-to destination for businesses looking to thrive in a dynamic and growing market.',
-    services: ['Premium Office Spaces', 'Commercial Retail Units', 'Modern Infrastructure', 'Strategic Location', 'Government Approved', 'Flexible Space Options'],
-    website: 'https://www.navbodhtower.in',
-    phone: '+91 7591 066 666',
-    email: 'construction@navbodh.com',
-    location: 'Shankar Nagar, Raipur, Chhattisgarh',
-    image: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80',
-  },
-  {
-    id: 2,
     name: 'Navbodh Prakashan',
     project: 'Educational Publishing House',
     tagline: 'Est. 1985 · Leading Publisher in CG & MP',
@@ -59,7 +37,29 @@ const CONCERNS = [
     location: 'Raipur, Chhattisgarh',
     image: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80',
   },
-  {
+    {
+    id: 2,
+    name: 'Yugbodh Digital Prints',
+    project: 'Commercial Printing & Publishing',
+    tagline: 'Raipur\'s Leading Printing Firm',
+    category: 'Printing & Digital Media',
+    color: '#dc2626',
+    accent: '#fee2e2',
+    bg: 'linear-gradient(135deg, #7f1d1d 0%, #dc2626 100%)',
+    icon: <MdPrint size={28} />,
+    emoji: '🖨️',
+    // status: 'Active',
+    // statusColor: '#16a34a',
+    description: 'Yugbodh Digital Prints is a prominent commercial printing and publishing firm in Raipur, Chhattisgarh. Established as an offset printer and publisher, it serves as the primary production house for major educational publishing concerns including Navbodh Prakashan.',
+    highlight: 'Specializing in bulk educational text printing, children\'s literature, magazines, and commercial offset jobs — serving businesses across Chhattisgarh and Madhya Pradesh.',
+    services: ['Educational Textbook Printing', 'Children\'s Literature', 'Commercial Offset', 'Digital Reproduction', 'Magazines & Brochures', 'Visiting Cards'],
+    website: null,
+    phone: '+91 7896 541 236',
+    email: null,
+    location: 'Samta Colony, Raipur, Chhattisgarh',
+    image: 'https://images.unsplash.com/photo-1516131206008-dd041a9764fd?w=800&q=80',
+  },
+    {
     id: 3,
     name: 'Gyanbodh Prakashan',
     project: 'Children\'s Book Publishing',
@@ -83,6 +83,30 @@ const CONCERNS = [
   },
   {
     id: 4,
+    name: 'Nikhil Agro Product',
+    project: 'Navbodh Tower',
+    tagline: 'Premium Commercial Complex · Shankar Nagar, Raipur',
+    category: 'Construction & Real Estate',
+    color: '#1a2c1c',
+    accent: '#e8d5b0',
+    bg: 'linear-gradient(135deg, #1a2c1c 0%, #2a4b2e 100%)',
+    icon: <TbBuildingSkyscraper size={28} />,
+    emoji: '🏢',
+    // status: 'Active',
+    // statusColor: '#16a34a',
+    description: 'Navbodh Tower is a modern, government-approved commercial complex designed to cater to the diverse needs of today\'s businesses. Strategically located in the bustling area of Shankar Nagar, Raipur (C.G.), it offers premium commercial spaces with excellent visibility, seamless connectivity, and world-class infrastructure.',
+    highlight: 'Cutting-edge design with flexible space options, poised to become the go-to destination for businesses looking to thrive in a dynamic and growing market.',
+    services: ['Premium Office Spaces', 'Commercial Retail Units', 'Modern Infrastructure', 'Strategic Location', 'Government Approved', 'Flexible Space Options'],
+    website: 'https://www.navbodhtower.in',
+    phone: '+91 7591 066 666',
+    email: 'construction@navbodh.com',
+    location: 'Shankar Nagar, Raipur, Chhattisgarh',
+    image: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80',
+  },
+
+
+  {
+    id: 5,
     name: 'Shivayan Health Care',
     project: '50-Bed Multi-Specialty Hospital',
     // tagline: 'Under Construction · Nardaha, Raipur',
@@ -103,28 +127,7 @@ const CONCERNS = [
     location: 'Nardaha, Raipur, Chhattisgarh',
     image: 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&q=80',
   },
-  {
-    id: 5,
-    name: 'Yugbodh Digital Prints',
-    project: 'Commercial Printing & Publishing',
-    tagline: 'Raipur\'s Leading Printing Firm',
-    category: 'Printing & Digital Media',
-    color: '#dc2626',
-    accent: '#fee2e2',
-    bg: 'linear-gradient(135deg, #7f1d1d 0%, #dc2626 100%)',
-    icon: <MdPrint size={28} />,
-    emoji: '🖨️',
-    // status: 'Active',
-    // statusColor: '#16a34a',
-    description: 'Yugbodh Digital Prints is a prominent commercial printing and publishing firm in Raipur, Chhattisgarh. Established as an offset printer and publisher, it serves as the primary production house for major educational publishing concerns including Navbodh Prakashan.',
-    highlight: 'Specializing in bulk educational text printing, children\'s literature, magazines, and commercial offset jobs — serving businesses across Chhattisgarh and Madhya Pradesh.',
-    services: ['Educational Textbook Printing', 'Children\'s Literature', 'Commercial Offset', 'Digital Reproduction', 'Magazines & Brochures', 'Visiting Cards'],
-    website: null,
-    phone: '+91 7896 541 236',
-    email: null,
-    location: 'Samta Colony, Raipur, Chhattisgarh',
-    image: 'https://images.unsplash.com/photo-1516131206008-dd041a9764fd?w=800&q=80',
-  },
+
 ];
 
 const ConcernCard = ({ concern, index }) => {
@@ -292,8 +295,8 @@ const SisterConcerns = () => {
             <motion.div variants={fadeUp} style={{ display: 'flex', gap: 'clamp(20px,4vw,48px)', flexWrap: 'wrap' }}>
               {[
                 { value: '5',    label: 'Sister Concerns' },
-                { value: '40+', label: 'Years of Legacy' },
-                { value: '500+', label: 'Book Titles' },
+                { value: '35+', label: 'Years of Legacy' },
+                { value: '1200+', label: 'Book Titles' },
                 { value: 'CG',   label: 'Based in Raipur' },
               ].map((s, i) => (
                 <div key={i} style={{ textAlign: 'center' }}>

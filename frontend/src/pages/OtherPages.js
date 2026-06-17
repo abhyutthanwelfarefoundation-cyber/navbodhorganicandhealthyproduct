@@ -197,8 +197,60 @@ export const Contact = () => {
                   </div>
                 </div>
               ))}
+
+              <div style={{ marginTop: 24 }}>
+  <div
+    style={{
+      fontWeight: 700,
+      fontSize: 11,
+      letterSpacing: '0.09em',
+      textTransform: 'uppercase',
+      color: 'var(--forest-mid)',
+      marginBottom: 10,
+      textAlign:'center'
+    }}
+  >
+    Follow Us
+  </div>
+
+  <div
+    style={{
+      display: 'flex',
+      gap: 10,
+      flexWrap: 'wrap',
+    }}
+  >
+    <a
+      href="https://www.instagram.com/navbodh_organic/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="btn btn-outline"
+    >
+      📸 Instagram
+    </a>
+
+    <a
+      href="https://www.facebook.com/profile.php?id=61590378151350"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="btn btn-outline"
+    >
+      📘 Facebook
+    </a>
+
+    <a
+      href="https://wa.me/917471145013"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="btn btn-outline"
+    >
+      💬 WhatsApp
+    </a>
+  </div>
+</div>
               <a href="https://www.google.com/maps/place/Okinawa/@21.24398,81.6232361,17z/data=!3m1!4b1!4m6!3m5!1s0x3a28dd05fc03a045:0xf5a4920e07656bd8!8m2!3d21.243975!4d81.625811!16s%2Fg%2F11ld58tm8q?entry=ttu&g_ep=EgoyMDI2MDUyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="btn btn-forest" style={{ marginTop: 10 }}>📍 Open in Google Maps</a>
             </div>
+            
 
             {/* Form with validation */}
             <div style={{ background: 'white', borderRadius: 20, padding: 'clamp(24px,3.5vw,40px)', border: '1px solid var(--border)', boxShadow: 'var(--shadow-md)' }}>

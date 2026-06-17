@@ -77,7 +77,7 @@ const Products = () => {
           {/* Category tabs */}
           <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
             {CATS.map(({ key, label, Icon }) => (
-              <motion.button key={key}
+              <motion.button key={key}  
                 onClick={() => setCat(key)}
                 whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
                 style={{

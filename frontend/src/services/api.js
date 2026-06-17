@@ -13,7 +13,7 @@ const EMAILJS_ORDER_TEMPLATE   = 'template_6e4p82h';   // new orders
 
 
 export const STATIC_PRODUCTS = [
-  { _id: '1', name: 'Dasheri Mango', category: 'mango', emoji: '🥭', origin: 'Uttar Pradesh',/*  badge: 'Sweet & Fibrous', */ description: 'The king of mangoes from UP — intensely sweet, silky smooth, and absolutely fibrous-free. Hand-picked at perfect ripeness.', price: 160, unit: 'kg', featured: false, tags: ['bestseller', 'sweet'], inStock: true},
+  { _id: '1', name: 'Dasheri Mango', category: 'mango', emoji: '🥭', origin: 'Uttar Pradesh',/*  badge: 'Sweet & Fibrous', */ description: 'The king of mangoes from UP — intensely sweet, silky smooth, and absolutely fibrous-free. Hand-picked at perfect ripeness.', price: 160, unit: 'kg', featured: false, tags: ['bestseller', 'sweet'], inStock: false},
     { _id: '2', name: 'Langda', category: 'mango', emoji: '🥭', origin: 'Varanasi',/*  badge: 'Turpentine Free', */ description: 'The iconic green-skinned mango from Varanasi. Sweet, slightly tangy, and completely turpentine-free. A must-try.', price: 160, unit: 'kg', tags: ['tangy', 'classic'], inStock: false },
   { _id: '3', name: 'Banganapalli', category: 'mango', emoji: '🥭', origin: 'Andhra Pradesh', /*  badge: 'Large & Juicy', */ description: 'Large, golden-yellow mangoes with a thin skin and rich, juicy pulp. A South Indian classic loved for its mild sweetness.', price: 120, unit: 'kg', tags: ['juicy', 'large'], inStock: true },
 

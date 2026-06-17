@@ -155,7 +155,7 @@ const OrderSuccess = () => {
                 </tr>
                 <tr>
                   <td colSpan={3} style={{ padding: '8px 14px', fontSize: 12, color: '#888' }}>Delivery Charges</td>
-                  <td style={{ padding: '8px 14px', fontSize: 12, fontWeight: 700, color: '#166534', textAlign: 'right' }}>FREE</td>
+                  <td style={{ padding: '8px 14px', fontSize: 12, fontWeight: 700, color: '#166534', textAlign: 'right' }}>Depends On Distance  </td>
                 </tr>
               </tbody>
             </table>
@@ -164,11 +164,61 @@ const OrderSuccess = () => {
             <div style={{ marginTop: 28, paddingTop: 18, borderTop: '1px solid #e8e0d0', textAlign: 'center', fontSize: 11, color: '#999', lineHeight: 1.8 }}>
               Thank you for choosing Navbodh Organics 🌿<br />
               Pure · Natural · Sustainable · Raipur, Chhattisgarh<br />
-              For queries: +91 74711 45013 · navbodhorganics@gmail.com
+              For queries: +91 74711 45013 · navbodhorga  nics@gmail.com
             </div>
-          </div>
+          </div>  
         </div>
+<div style={{ marginTop: 28 }}>
+  <div
+    style={{
+      fontSize: 12,
+      fontWeight: 700,
+      letterSpacing: '0.08em',
+      textTransform: 'uppercase',
+      color: 'var(--ink-soft)',
+      marginBottom: 12,
+      textAlign:'center'
+    }}
+  >
+    Follow Us
+  </div>
 
+  <div
+    style={{
+      display: 'flex',
+      gap: 10,
+      justifyContent: 'center',
+      flexWrap: 'wrap',
+    }}
+  >
+    <a
+      href="https://www.instagram.com/navbodh_organic/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="btn btn-outline"
+    >
+      📸 Instagram
+    </a>
+
+    <a
+      href="https://www.facebook.com/profile.php?id=61590378151350"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="btn btn-outline"
+    >
+      📘 Facebook
+    </a>
+
+    <a
+      href="https://wa.me/917471145013"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="btn btn-outline"
+    >
+      💬 WhatsApp
+    </a>
+  </div>
+</div>
       </div>
     </div>
   );
