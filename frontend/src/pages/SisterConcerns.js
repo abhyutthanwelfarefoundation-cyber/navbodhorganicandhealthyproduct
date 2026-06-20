@@ -296,7 +296,7 @@ const SisterConcerns = () => {
               {[
                 { value: '5',    label: 'Sister Concerns' },
                 { value: '35+', label: 'Years of Legacy' },
-                { value: '1200+', label: 'Book Titles' },
+                { value: '1200  +', label: 'Book Titles' },
                 { value: 'CG',   label: 'Based in Raipur' },
               ].map((s, i) => (
                 <div key={i} style={{ textAlign: 'center' }}>

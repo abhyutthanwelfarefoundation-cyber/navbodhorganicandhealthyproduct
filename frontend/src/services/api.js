@@ -3,32 +3,27 @@ import emailjs from '@emailjs/browser';
 
 const API = axios.create({ baseURL: process.env.REACT_APP_API_URL || '/api' });
 
-// ─── EmailJS config ───────────────────────────────────────────────
-const EMAILJS_SERVICE_ID       = 'service_n7gjyhg';
-const EMAILJS_PUBLIC_KEY       = 'rAeYi3QJMOORI1p4U';
-const EMAILJS_ENQUIRY_TEMPLATE = 'template_xq48lbh';   // enquiry form
-const EMAILJS_ORDER_TEMPLATE   = 'template_6e4p82h';   // new orders
+// ─── EmailJS config — from environment variables ──────────────────
+const EMAILJS_SERVICE_ID       = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+const EMAILJS_PUBLIC_KEY       = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+const EMAILJS_ENQUIRY_TEMPLATE = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+const EMAILJS_ORDER_TEMPLATE   = process.env.REACT_APP_EMAILJS_ORDER_TEMPLATE;
 // ──────────────────────────────────────────────────────────────────
 
-
-
 export const STATIC_PRODUCTS = [
-  { _id: '1', name: 'Dasheri Mango', category: 'mango', emoji: '🥭', origin: 'Uttar Pradesh',/*  badge: 'Sweet & Fibrous', */ description: 'The king of mangoes from UP — intensely sweet, silky smooth, and absolutely fibrous-free. Hand-picked at perfect ripeness.', price: 160, unit: 'kg', featured: false, tags: ['bestseller', 'sweet'], inStock: false},
-    { _id: '2', name: 'Langda', category: 'mango', emoji: '🥭', origin: 'Varanasi',/*  badge: 'Turpentine Free', */ description: 'The iconic green-skinned mango from Varanasi. Sweet, slightly tangy, and completely turpentine-free. A must-try.', price: 160, unit: 'kg', tags: ['tangy', 'classic'], inStock: false },
-  { _id: '3', name: 'Banganapalli', category: 'mango', emoji: '🥭', origin: 'Andhra Pradesh', /*  badge: 'Large & Juicy', */ description: 'Large, golden-yellow mangoes with a thin skin and rich, juicy pulp. A South Indian classic loved for its mild sweetness.', price: 120, unit: 'kg', tags: ['juicy', 'large'], inStock: true },
-
-  { _id: '4', name: 'Shafeda', category: 'mango', emoji: '🥭', origin: 'Maharashtra',/* badge: 'Mild & Fragrant' ,*/ description: 'A Maharashtrian gem — mild sweetness, heavenly fragrance, and silky texture. Perfect for those who prefer subtlety.', price: 160, unit: 'kg', tags: ['fragrant', 'mild'], inStock: false },
-  { _id: '5', name: 'Tota Pari', category: 'mango', emoji: '🥭', origin: 'Andhra Pradesh', /*badge: 'Unique Beak Shape', */ description: 'Named for its distinctive parrot-beak shape. Fibre-free, sweet pulp with a beautiful golden hue inside.', price: 160, unit: 'kg', tags: ['unique', 'fibrefree'], inStock: false },
-  { _id: '6', name: 'Amrapali', category: 'mango', emoji: '🥭', origin: 'All India',/* badge: 'Regular Bearer', */ description: 'A hybrid mango that fruits regularly through the season. Deep orange pulp, small seed, intensely sweet.', price: 160, unit: 'kg', featured: false, tags: ['hybrid', 'sweet'], inStock: false },
-  { _id: '7', name: 'Mallika', category: 'mango', emoji: '🥭', origin: 'Hybrid Variety',/* badge: 'Neelam × Dasheri', */ description: "The best of two worlds — Neelam's aroma meets Dasheri's sweetness. Smooth, rich, and absolutely delicious.", price: 160, unit: 'kg', tags: ['hybrid', 'aromatic'], inStock: false },
-  { _id: '8', name: 'Pure Desi Ghee', category: 'dairy', emoji: '🧈', badge: 'A2 Quality', description: "Hand-churned from fresh cow's milk using traditional bilona method. Rich aroma, golden colour, A2 quality.", price: 1500, unit: '500ml', featured: true, tags: ['a2', 'bilona', 'traditional'], inStock: true },
-  // { _id: '9', name: 'Fresh Milk', category: 'dairy', emoji: '🥛', /* badge: 'Farm Fresh', */ description: 'Pure, unadulterated farm-fresh milk. No preservatives, no additives — just natural goodness delivered to your door.', price: 60, unit: 'litre', tags: ['fresh', 'natural'], inStock: false },
-  { _id: '10', name: 'Jackfruit', category: 'fruit', emoji: '🍈',/*  badge: 'Seasonal', */ description: "Organic jackfruit — nature's meat alternative. Tender, flavourful, and packed with nutrients. Available whole or sliced.", price: 80, unit: 'kg', tags: ['seasonal', 'organic'], inStock: false },
-  { _id: '11', name: 'Fresh Lemon', category: 'fruit', emoji: '🍋', /*  badge: 'Vitamin C', */ description: 'Tangy, juicy, organic lemons packed with Vitamin C. Perfect for cooking, beverages and health rituals.', price: 60, unit: 'kg', tags: ['vitamin-c', 'tangy'], inStock: false },
-  { _id: '12', name: 'Kaju (Cashews)', category: 'nut', emoji: '🌰', /*  badge: 'Premium Grade', */ description: 'Premium quality whole cashews. Creamy, buttery, and rich in healthy fats. Great as a snack or in cooking.', price: 900, unit: 'kg', tags: ['premium', 'healthy-fats'], inStock: false },
-  { _id: '13', name: 'Star Fruit', category: 'fruit', emoji: '⭐',/*  badge: 'Antioxidant Rich', */ description: 'Exotic tropical star fruit (carambola) — visually stunning, tangy-sweet taste, loaded with antioxidants.', price: 120, unit: 'kg', tags: ['exotic', 'antioxidant'], inStock: false },
+  { _id: '1', name: 'Dasheri Mango',  category: 'mango', emoji: '🥭', origin: 'Uttar Pradesh',  description: 'The king of mangoes from UP — intensely sweet, silky smooth, and absolutely fibrous-free. Hand-picked at perfect ripeness.', price: 160,  unit: 'kg',    featured: false, tags: ['bestseller', 'sweet'],    inStock: false },
+  { _id: '2', name: 'Langda',         category: 'mango', emoji: '🥭', origin: 'Varanasi',        description: 'The iconic green-skinned mango from Varanasi. Sweet, slightly tangy, and completely turpentine-free. A must-try.',           price: 160,  unit: 'kg',    featured: false, tags: ['tangy', 'classic'],        inStock: false },
+  { _id: '3', name: 'Banganapalli',   category: 'mango', emoji: '🥭', origin: 'Andhra Pradesh',  description: 'Large, golden-yellow mangoes with a thin skin and rich, juicy pulp. A South Indian classic loved for its mild sweetness.',    price: 120,  unit: 'kg',    featured: false, tags: ['juicy', 'large'],          inStock: true  },
+  { _id: '4', name: 'Shafeda',        category: 'mango', emoji: '🥭', origin: 'Maharashtra',     description: 'A Maharashtrian gem — mild sweetness, heavenly fragrance, and silky texture. Perfect for those who prefer subtlety.',        price: 160,  unit: 'kg',    featured: false, tags: ['fragrant', 'mild'],        inStock: false },
+  { _id: '5', name: 'Tota Pari',      category: 'mango', emoji: '🥭', origin: 'Andhra Pradesh',  description: 'Named for its distinctive parrot-beak shape. Fibre-free, sweet pulp with a beautiful golden hue inside.',                    price: 160,  unit: 'kg',    featured: false, tags: ['unique', 'fibrefree'],     inStock: false },
+  { _id: '6', name: 'Amrapali',       category: 'mango', emoji: '🥭', origin: 'All India',       description: 'A hybrid mango that fruits regularly through the season. Deep orange pulp, small seed, intensely sweet.',                     price: 160,  unit: 'kg',    featured: false, tags: ['hybrid', 'sweet'],         inStock: false },
+  { _id: '7', name: 'Mallika',        category: 'mango', emoji: '🥭', origin: 'Hybrid Variety',  description: "The best of two worlds — Neelam's aroma meets Dasheri's sweetness. Smooth, rich, and absolutely delicious.",                price: 160,  unit: 'kg',    featured: false, tags: ['hybrid', 'aromatic'],      inStock: false },
+  { _id: '8', name: 'Pure Desi Ghee', category: 'dairy', emoji: '🧈', origin: 'Raipur, CG',     description: "Hand-churned from fresh cow's milk using traditional bilona method. Rich aroma, golden colour, A2 quality.",                price: 1500, unit: '500ml', featured: true,  tags: ['a2', 'bilona', 'traditional'], inStock: true, badge: 'A2 Quality' },
+  { _id: '10', name: 'Jackfruit',     category: 'fruit', emoji: '🍈', origin: 'Raipur, CG',     description: "Organic jackfruit — nature's meat alternative. Tender, flavourful, and packed with nutrients. Available whole or sliced.",    price: 80,   unit: 'kg',    featured: false, tags: ['seasonal', 'organic'],     inStock: false },
+  { _id: '11', name: 'Fresh Lemon',   category: 'fruit', emoji: '🍋', origin: 'Raipur, CG',     description: 'Tangy, juicy, organic lemons packed with Vitamin C. Perfect for cooking, beverages and health rituals.',                     price: 60,   unit: 'kg',    featured: false, tags: ['vitamin-c', 'tangy'],      inStock: false },
+  { _id: '12', name: 'Kaju (Cashews)',category: 'nut',   emoji: '🌰', origin: 'Raipur, CG',     description: 'Premium quality whole cashews. Creamy, buttery, and rich in healthy fats. Great as a snack or in cooking.',                  price: 900,  unit: 'kg',    featured: false, tags: ['premium', 'healthy-fats'], inStock: false },
+  { _id: '13', name: 'Star Fruit',    category: 'fruit', emoji: '⭐', origin: 'Raipur, CG',     description: 'Exotic tropical star fruit (carambola) — visually stunning, tangy-sweet taste, loaded with antioxidants.',                   price: 120,  unit: 'kg',    featured: false, tags: ['exotic', 'antioxidant'],   inStock: false },
 ];
-         
 
 export const getProducts = async (params = {}) => {
   try {
@@ -55,22 +50,16 @@ export const getProduct = async (id) => {
 
 // ── Create order + send email notification ──────────────────────
 export const createOrder = async (orderData) => {
-  // Generate a fallback order ID
   const orderId = 'NVB-' + Date.now().toString().slice(-6);
-
-  // Try saving to backend
   try {
     const res = await API.post('/orders', orderData);
     if (res.data) {
-      // Also send email even if backend succeeds
       await sendOrderEmail(orderData, res.data._id || res.data.orderId || orderId);
       return res.data;
     }
   } catch {
-    // Backend failed — use fallback ID and still send email
+    // Backend failed — fallback
   }
-
-  // Send order notification email
   await sendOrderEmail(orderData, orderId);
   return { orderId };
 };
@@ -100,7 +89,6 @@ const sendOrderEmail = async (orderData, orderId) => {
     );
   } catch (err) {
     console.warn('Order email failed:', err);
-    // Don't throw — order should still complete even if email fails
   }
 };
 
@@ -123,17 +111,3 @@ export const submitEnquiry = async (data) => {
 };
 
 export default API;
-
-
-
-
-
-
-
-
-
-
-
-
-
-

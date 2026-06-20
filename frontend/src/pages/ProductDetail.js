@@ -224,7 +224,7 @@ const ProductDetail = () => {
 
               {/* Delivery info */}
               <div style={{ marginTop: 24, background: "var(--beige-warm)", borderRadius: 12, padding: "14px 18px", border: "1px solid var(--border-warm)", fontSize: 13, color: "var(--ink-mid)" }}>
-                🚚 <strong>Free delivery</strong> across Raipur · 📦 Same-day dispatch · 📞 <a href="tel:7471145013" style={{ color: "var(--forest)" }}>7471145013</a>
+                🚚 <strong>Fresh delivery</strong> across Raipur · 📦 Same-day dispatch · 📞 <a href="tel:7471145013" style={{ color: "var(--forest)" }}>7471145013</a>
               </div>
             </div>
           </div>
