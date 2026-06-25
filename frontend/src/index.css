@@ -380,6 +380,11 @@ h1,h2,h3,h4 { font-family: var(--font-display); line-height: 1.12; font-weight: 
 /* ════════════════════════════════
    RESPONSIVE
 ════════════════════════════════ */
+
+/* ── Admin layout helpers ── */
+.hide-desktop { display: none; }
+
+
 @media (max-width: 960px) {
   .nav-links { display: none !important; }
   .hamburger { display: flex !important; }

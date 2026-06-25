@@ -1,10 +1,16 @@
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
+const mongoose = require('mongoose');
 require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+// Connect to MongoDB
+mongoose.connect(process.env.MONGODB_URI)
+  .then(() => console.log('✅ MongoDB connected'))
+  .catch(err => console.error('❌ MongoDB error:', err.message));
 
 // Middleware
 app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:3000', credentials: true }));

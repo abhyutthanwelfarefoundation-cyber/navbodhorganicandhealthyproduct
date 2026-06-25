@@ -1,14 +1,13 @@
 import axios from 'axios';
 import emailjs from '@emailjs/browser';
 
-const API = axios.create({ baseURL: process.env.REACT_APP_API_URL || '/api' });
+const BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+const API = axios.create({ baseURL: BASE_URL });
 
-// ─── EmailJS config — from environment variables ──────────────────
 const EMAILJS_SERVICE_ID       = process.env.REACT_APP_EMAILJS_SERVICE_ID;
 const EMAILJS_PUBLIC_KEY       = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 const EMAILJS_ENQUIRY_TEMPLATE = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
 const EMAILJS_ORDER_TEMPLATE   = process.env.REACT_APP_EMAILJS_ORDER_TEMPLATE;
-// ──────────────────────────────────────────────────────────────────
 
 export const STATIC_PRODUCTS = [
   { _id: '1', name: 'Dasheri Mango',  category: 'mango', emoji: '🥭', origin: 'Uttar Pradesh',  description: 'The king of mangoes from UP — intensely sweet, silky smooth, and absolutely fibrous-free. Hand-picked at perfect ripeness.', price: 160,  unit: 'kg',    featured: false, tags: ['bestseller', 'sweet'],    inStock: false },
@@ -25,11 +24,12 @@ export const STATIC_PRODUCTS = [
   { _id: '13', name: 'Star Fruit',    category: 'fruit', emoji: '⭐', origin: 'Raipur, CG',     description: 'Exotic tropical star fruit (carambola) — visually stunning, tangy-sweet taste, loaded with antioxidants.',                   price: 120,  unit: 'kg',    featured: false, tags: ['exotic', 'antioxidant'],   inStock: false },
 ];
 
+// Always try DB first, only fall back to static if DB completely fails
 export const getProducts = async (params = {}) => {
   try {
     const res = await API.get('/products', { params });
-    if (!res.data || res.data.length === 0) throw new Error('empty');
-    return res.data;
+    if (res.data && res.data.length > 0) return res.data;
+    throw new Error('empty');
   } catch {
     let data = STATIC_PRODUCTS;
     if (params.category) data = data.filter(p => p.category === params.category);
@@ -38,17 +38,28 @@ export const getProducts = async (params = {}) => {
   }
 };
 
+// Try DB by MongoDB ID first, then try by name match, then fall back to static
 export const getProduct = async (id) => {
   try {
     const res = await API.get(`/products/${id}`);
-    if (!res.data || !res.data.name) throw new Error('incomplete');
-    return res.data;
+    if (res.data && res.data.name) return res.data;
+    throw new Error('not found');
   } catch {
+    // id might be a short static id like '3' — find by matching name from all products
+    try {
+      const all = await API.get('/products');
+      if (all.data && all.data.length > 0) {
+        const staticP = STATIC_PRODUCTS.find(p => p._id === id);
+        if (staticP) {
+          const dbP = all.data.find(p => p.name === staticP.name);
+          if (dbP) return dbP;
+        }
+      }
+    } catch {}
     return STATIC_PRODUCTS.find(p => p._id === id);
   }
 };
 
-// ── Create order + send email notification ──────────────────────
 export const createOrder = async (orderData) => {
   const orderId = 'NVB-' + Date.now().toString().slice(-6);
   try {
@@ -57,57 +68,42 @@ export const createOrder = async (orderData) => {
       await sendOrderEmail(orderData, res.data._id || res.data.orderId || orderId);
       return res.data;
     }
-  } catch {
-    // Backend failed — fallback
-  }
+  } catch {}
   await sendOrderEmail(orderData, orderId);
   return { orderId };
 };
 
-// ── Send order email via EmailJS ────────────────────────────────
 const sendOrderEmail = async (orderData, orderId) => {
   try {
     const itemsList = orderData.items
       .map(i => `${i.emoji || ''} ${i.name} × ${i.quantity} ${i.unit} = ₹${i.price * i.quantity}`)
       .join('\n');
-
-    await emailjs.send(
-      EMAILJS_SERVICE_ID,
-      EMAILJS_ORDER_TEMPLATE,
-      {
-        order_id:       orderId,
-        customer_name:  orderData.customer.name,
-        phone:          orderData.customer.phone,
-        address:        `${orderData.customer.address || '—'}, ${orderData.customer.city || 'Raipur'}`,
-        items:          itemsList,
-        total:          orderData.total,
-        payment_method: orderData.paymentMethod === 'cod' ? '💵 Cash on Delivery' : '📱 UPI Payment',
-        txn_id:         orderData.txnId || '—',
-        notes:          orderData.notes || '—',
-      },
-      EMAILJS_PUBLIC_KEY,
-    );
+    await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_ORDER_TEMPLATE, {
+      order_id:       orderId,
+      customer_name:  orderData.customer.name,
+      phone:          orderData.customer.phone,
+      address:        `${orderData.customer.address || '—'}, ${orderData.customer.city || 'Raipur'}`,
+      items:          itemsList,
+      total:          orderData.total,
+      payment_method: orderData.paymentMethod === 'cod' ? '💵 Cash on Delivery' : '📱 UPI Payment',
+      txn_id:         orderData.txnId || '—',
+      notes:          orderData.notes || '—',
+    }, EMAILJS_PUBLIC_KEY);
   } catch (err) {
     console.warn('Order email failed:', err);
   }
 };
 
-// ── Enquiry form ────────────────────────────────────────────────
 export const submitEnquiry = async (data) => {
-  const result = await emailjs.send(
-    EMAILJS_SERVICE_ID,
-    EMAILJS_ENQUIRY_TEMPLATE,
-    {
-      name:    data.name,
-      phone:   data.phone,
-      email:   data.email   || '—',
-      product: data.product || '—',
-      message: data.message || '—',
-    },
-    EMAILJS_PUBLIC_KEY,
-  );
+  const result = await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_ENQUIRY_TEMPLATE, {
+    name:    data.name,
+    phone:   data.phone,
+    email:   data.email   || '—',
+    product: data.product || '—',
+    message: data.message || '—',
+  }, EMAILJS_PUBLIC_KEY);
   if (result.status !== 200) throw new Error('EmailJS failed');
   return { success: true };
 };
 
-export default API;
+export default API;   

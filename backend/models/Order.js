@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const orderItemSchema = new mongoose.Schema({
-  product: { type: mongoose.Schema.Types.ObjectId, ref: 'Product' },
+  product: { type: mongoose.Schema.Types.Mixed }, // accepts ObjectId or string or null
   name: String,
   emoji: String,
   price: Number,
@@ -19,8 +19,14 @@ const orderSchema = new mongoose.Schema({
   },
   items: [orderItemSchema],
   total: Number,
-  status: { type: String, enum: ['pending', 'confirmed', 'delivered', 'cancelled'], default: 'pending' },
+  status: {
+    type: String,
+    enum: ['placed', 'confirmed', 'packed', 'dispatched', 'delivered', 'cancelled'],
+    default: 'placed'
+  },
   paymentMethod: { type: String, enum: ['cod', 'upi', 'online'], default: 'cod' },
+  paymentStatus: { type: String, default: 'pending' },
+  txnId: String,
   notes: String,
 }, { timestamps: true });
 

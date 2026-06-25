@@ -4,7 +4,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 const OrderSuccess = () => {
   const [params] = useSearchParams();
   const orderId = params.get('id')     || 'NVB-XXXXXX';
-  const name    = params.get('name')   || 'Customer';
+  const name    = params.get('name')   || 'Customer'; 
   const phone   = params.get('phone')  || '';
   const total   = params.get('total')  || '0';
   const method  = params.get('method') || 'upi';
@@ -70,7 +70,7 @@ const OrderSuccess = () => {
         <div style={{ display: 'inline-block', background: 'rgba(232,213,176,0.15)', border: '1px solid rgba(232,213,176,0.3)', borderRadius: 12, padding: '12px 28px' }}>
           <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.6)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 4 }}>Order ID</div>
           <div style={{ fontFamily: 'var(--font-display)', fontSize: 24, fontWeight: 700, color: 'var(--beige)' }}>
-            #{String(orderId).slice(-8).toUpperCase()}
+            #{String(orderId).slice(-6).toUpperCase()}
           </div>
         </div>
       </div>
@@ -109,7 +109,7 @@ const OrderSuccess = () => {
               </div>
               <div style={{ textAlign: 'right' }}>
                 <div style={{ fontSize: 11, fontWeight: 700, color: '#888', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Invoice</div>
-                <div style={{ fontSize: 20, fontWeight: 800, color: '#1a2c1c', marginTop: 4 }}>#{String(orderId).slice(-8).toUpperCase()}</div>
+                <div style={{ fontSize: 20, fontWeight: 800, color: '#1a2c1c', marginTop: 4 }}>#{String(orderId).slice(-6).toUpperCase()}</div>
                 <div style={{ fontSize: 12, color: '#888', marginTop: 3 }}>{date}</div>
               </div>
             </div>
@@ -146,7 +146,7 @@ const OrderSuccess = () => {
               <tbody>
                 <tr>
                   <td colSpan={4} style={{ padding: '10px 14px', fontSize: 13, color: '#555', borderBottom: '1px solid #f0ece4' }}>
-                    🛍 Order items (see order #{String(orderId).slice(-8).toUpperCase()})
+                    🛍 Order items (see order #{String(orderId).slice(-6).toUpperCase()})
                   </td>
                 </tr>
                 <tr style={{ background: '#f8f5ef' }}>

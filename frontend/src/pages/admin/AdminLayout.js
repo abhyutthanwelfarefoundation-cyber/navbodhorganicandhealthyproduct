@@ -23,7 +23,7 @@ const AdminLayout = () => {
   };
 
   const Sidebar = () => (
-    <div style={{ width: 240, background: '#0f1f11', minHeight: '100vh', display: 'flex', flexDirection: 'column', flexShrink: 0 }}>
+   <div style={{ width: 240, background: '#0f1f11', height: '100vh', display: 'flex', flexDirection: 'column', flexShrink: 0, overflowY: 'auto' }}>
       {/* Logo */}
       <div style={{ padding: '24px 20px', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
         <div style={{ fontSize: 22, fontWeight: 800, color: '#e8d5b0', fontFamily: 'var(--font-display)' }}>🌿 Navbodh</div>
@@ -63,9 +63,10 @@ const AdminLayout = () => {
   );
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', background: '#f9fafb' }}>
+    <div style={{ display: 'flex', minHeight: '100vh', background: '#f9fafb', alignItems: 'flex-start' }}>
       {/* Desktop sidebar */}
-      <div className="hide-mobile"><Sidebar /></div>
+     {/* Desktop sidebar */}
+<div className="hide-mobile" style={{ position: 'sticky', top: 0, height: '100vh', flexShrink: 0 }}><Sidebar /></div>
 
       {/* Mobile sidebar */}
       {open && (
