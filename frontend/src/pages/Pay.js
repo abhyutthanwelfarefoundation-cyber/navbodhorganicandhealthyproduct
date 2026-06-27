@@ -281,7 +281,7 @@ const Pay = () => {
                       lineHeight: 1.5,
                     }}
                   >
-                    📢 <strong>Notice:</strong> We only accept a minimum order
+                    📢 <strong>Note:</strong> We only accept a minimum order
                     of <strong>2 kg</strong>. Mangoes are available only in{" "}
                     <strong>2 kg</strong> and <strong>4 kg</strong> boxes.
                   </div>
