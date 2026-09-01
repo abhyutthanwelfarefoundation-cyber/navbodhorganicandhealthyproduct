@@ -82,7 +82,7 @@ const Footer = () => (
       {/* Bottom bar */}
       <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', padding: '20px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 , color: 'white'}}>
         <div style={{ fontSize: 12, opacity: 0.4 }}>© 2026 Navbodh Organic & Healthy Products. All Rights Reserved</div>
-        <div style={{ fontSize: 12, opacity: 0.4 }}>Developed by <a href="https://namanjainottportfolio.netlify.app/"> <b>Naman Jain</b></a> </div>
+        <div style={{ fontSize: 12, opacity: 0.4 }}>Developed by <a href="https://namanjain-rho.vercel.app/"><b>Naman Jain</b></a> </div>
       </div>
     </div>
   </footer>
